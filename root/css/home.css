@@ -2,13 +2,13 @@ body, html {
     height: 100%;
    margin: 0px;
     padding: 0px;
-    
+
 }
 
 .row{
     margin: 0px;
     padding: 0px;
-    
+
 }
 
 .container{
@@ -22,8 +22,8 @@ body, html {
     width: 100vw;
     height: 10vh;
     background: rgba(0, 0, 0, 0.3);
-    position: fixed;   
-   
+    position: fixed;
+
 }
 
 .header-con img{
@@ -32,18 +32,19 @@ body, html {
 }
 
 
+
 .header-con h3{
     color: white;
 }
 
 .home{
-     
+
     border-bottom: thin solid #4286f4;
 }
 
 #nav{
-    width: auto; 
-    margin-right: 5%; 
+    width: auto;
+    margin-right: 5%;
 }
 
 .seaform{
@@ -63,7 +64,7 @@ body, html {
 .content-con{
     width: 100vw;
     height: 100vh;
-    
+
     background-image: url(../img/home/war-planet-apes-2504_6.jpg);
     background-size: cover;
     background-position: center;
@@ -78,7 +79,7 @@ body, html {
     border: thin solid #4286f4;
     width: auto;
     color: white;
-    
+
 }
 
 .watchN-btn{
@@ -87,6 +88,3 @@ body, html {
     margin-left: 2%;
     color: white;
 }
-
-
-
