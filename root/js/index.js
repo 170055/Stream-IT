@@ -1,4 +1,4 @@
-$(function() {
+$(function (){
   console.log("Ready");
   var attemps = 0;
   $("#error").hide();
@@ -107,6 +107,8 @@ $(function() {
     $(location).attr('href', 'pages/home.html');
   }); //
 
+
+
   //signup
 
   $("#palert").hide();
@@ -117,26 +119,56 @@ $(function() {
     event.preventDefault();
 
     var pass1 = $("#password-input1").val();
+    var name1 = $("#user-input1").val();
+    var check = 1;
 
-    var nameInput = $("#user-input").val();
+    if (pass1 == '') {
+      check = 0;
+      
 
+
+    }
+
+    if (name1 == '') {
+      check = 0;
+
+
+
+    }
+
+    if (check === 1) {
+    $(location).attr('href', 'pages/home.html');
     console.log(pass1);
 
-
-
-
-
-
-
-
-
+  } else {
+    $("#palert").show();
+    $("#signup").css({
+      "margin-top": "1%"
+    });
+    $(".text-right").css({
+      "margin-top": "5%"
+    });
+  }
   }); //
 
   //tab switch
-  $(".sign1").on("click", function(event) {
+  $("#in").on("click", function(event) {
     event.preventDefault();
 
-    console.log("111");
+    $("#up-con").hide();
+    $("#in-con").show();
+
+
+
+  });
+
+  $("#up").on("click", function(event) {
+    event.preventDefault();
+
+    $("#in-con").hide();
+    $("#up-con").show();
+
+
 
   });
   //

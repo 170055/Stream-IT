@@ -88,7 +88,7 @@ body, html {
 }
 
 
-#in{
+.sign1{
     cursor: pointer;
     width: auto;
     text-decoration: underline;
@@ -96,7 +96,7 @@ body, html {
     margin-top: 10%;
 }
 
-#up{
+.sign2{
     cursor: pointer;
     width: auto;
     color: rgba(0, 0, 0, 0.4);
@@ -133,6 +133,14 @@ body, html {
 
 
 #user-input{
+    width: 90%;
+    height: 30px;
+    border-style: none;
+    border-bottom: thin solid #808080;
+    margin-left: 1%;
+}
+
+#user-input1{
     width: 90%;
     height: 30px;
     border-style: none;
@@ -222,8 +230,9 @@ body, html {
 #palert{
     margin-left: 16%;
     width: 75%;
+    margin-top: 1%;
 }
 
 #signup{
-    margin-top: 10%;
+    margin-top: 9.5%;
 }
