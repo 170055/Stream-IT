@@ -68,19 +68,19 @@ $(function (){
         "margin-top": "4%"
       });
 
-      if (attemps === 2) {
+      if (attemps === 1) {
         $("#error").text("Oops looks like you forgot your password.")
       }
 
-      if (attemps === 3) {
+      if (attemps === 2) {
         $("#error").text("Are you sure this is your account?")
       }
 
-      if (attemps === 4) {
+      if (attemps === 3) {
         $("#error").text("Have you tried turning it on and off again?")
       }
 
-      if (attemps > 5) {
+      if (attemps > 4) {
         $("#error").text("Looks like you will need to reset your password. Please press the forgot password button above.");
         $(".text-right").css({
           "margin-top": "1%"
@@ -116,16 +116,10 @@ $(function (){
 
     if (pass1 == '') {
       check = 0;
-      
-
-
     }
 
     if (name1 == '') {
       check = 0;
-
-
-
     }
 
     if (check === 1) {
