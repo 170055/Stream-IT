@@ -56,7 +56,7 @@ $(function() {
         "margin-top": "4%"
       });
       $("#error").show();
-      $("#error").text("Wow! Where is your name?");
+      $("#error").text("Your username is missing.");
       failed = 0;
       attemps = 0;
     }
@@ -69,27 +69,19 @@ $(function() {
       });
 
       if (attemps === 2) {
-        $("#error").text("Oops looks like you forgot your password....")
-      }
-
-      if (attemps === 2) {
-        $("#error").text("Maybe you should try thinking harder...")
+        $("#error").text("Oops looks like you forgot your password.")
       }
 
       if (attemps === 3) {
-        $("#error").text("Are you sure this is your account???")
+        $("#error").text("Are you sure this is your account?")
       }
 
       if (attemps === 4) {
-        $("#error").text("Have you tried turning it off and on again?")
-      }
-
-      if (attemps === 5) {
-        $("#error").text("Maybe this isn't meant to be?..")
+        $("#error").text("Have you tried turning it on and off again?")
       }
 
       if (attemps > 5) {
-        $("#error").text("Looks like you would need to reset your password... Please press forgot password. ;)");
+        $("#error").text("Looks like you will need to reset your password. Please press the forgot password button above.");
         $(".text-right").css({
           "margin-top": "1%"
         });
