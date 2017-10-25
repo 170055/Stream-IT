@@ -43,13 +43,14 @@
 }
 
 #imdb{
-  margin-top: 0;
+  margin-top: 2vh;
   text-align: center;
 
 }
 
 #genre{
   margin-left: 0px;
+  margin-top: 2vh;
 }
 
 #sum{
