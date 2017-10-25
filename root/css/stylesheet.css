@@ -29,7 +29,7 @@
 }
 
 .navbar-default {
-	background-color:transparent !important;
+	background-color:rgba(0, 0, 0, 0.1); !important;
 	border-color:transparent;
 	background-image:none;
 	box-shadow:none;
