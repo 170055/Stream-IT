@@ -89,12 +89,24 @@ p {
     border-radius: 0.5vh;
 }
 
+
 .row {
-    width: 90vw;
-    height: 25vh;
-    margin-left: 5vw;
+    width: 85vw;
+    height: 40vh;
+    margin-left: 7.5vw;
     margin-top: 5vh;
-    border: thin solid;
+}
+
+.movie {
+    width: 15.72vw;
+    height: 40vh;
+    float: left;
+    margin-left: 1vw;
+}
+
+.movie img {
+    width: 15.72vw;
+    height: 40vh;
 }
 
 .footer {
