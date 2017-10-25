@@ -1,12 +1,34 @@
-.logo img{
-  width: 30%;
-  height: auto;
 
-  margin-left: 3%;
-  margin-top: 3%;
+/* basic header style for all pages*/
+
+.navbar-brand, .navbar-nav li a {
+    line-height: 10vh;
+    height: 10vh;
+    padding-top: 0;
+    max-width: 100vw;
+    min-width: 6vw;
+    text-align: center;
+
 }
 
-.navbar{
-  background-color: rgba(0, 0, 0, 0.8);
-  height: 10vh;
+
+#logo{
+  height: 80%;
+  margin-top: 10%;
+  width: auto;
 }
+
+.navbar-form{
+    margin-top: 2.5vh;
+}
+
+#active a {
+  border-bottom: thick solid #4286f4;
+  background: rgba(255, 255, 255, 0.5);
+
+}
+
+
+
+
+/* basic header*/
