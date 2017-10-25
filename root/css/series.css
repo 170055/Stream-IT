@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-.outer-con{
-    width: 1800px;
-    height: 976px;
-    background-color: aqua;
-}
-
 body, html {
     height: 100%;
-   margin: 0px;
+    margin: 0px;
     padding: 0px;
 
 }
@@ -21,15 +14,17 @@ body, html {
 .container{
     margin: 0px;
     padding: 0px;
+    width: 100vw;
+    height: 147vh;
 }
 
-.header-con{
+.header{
     margin: 0px;
     padding: 0px;
     width: 100vw;
     height: 10vh;
     position: fixed;
-    background-color: dimgray;
+    background-color: rgba(0,0,0,0.7);
 }
 
 
@@ -37,8 +32,8 @@ body, html {
     color: white;
 }
 
-.home{
-    border-bottom: thick solid #4286f4;
+.movies{
+    border-bottom: medium solid #18abff;
 }
 
 #nav{
@@ -59,5 +54,74 @@ body, html {
     height: 100%;
     width: auto;
 }
-=======
->>>>>>> parent of ac09c78... outer con
+
+.heading-con {
+    width: 90vw;
+    height: 4vh;
+    margin-top: 15vh;
+    margin-left: 5vw;
+    border-bottom: thin solid #aaaaaa;
+}
+
+.heading {
+    width: 4.8vw;
+    height: 4vh;
+    border-bottom: medium solid #18abff;
+}
+
+p {
+    font-size: 1.7vw;
+    color: #18abff;
+    margin-top: -1vh;
+}
+
+.content-con {
+    width: 100vw;
+    height: 127vh;
+}
+
+.page-nav {
+    width: 60vw;
+    height: 5vh;
+    margin-left: 20vw;
+    margin-top: 3vw;
+    border: thin solid;
+    border-radius: 0.5vh;
+}
+
+.grey-block {
+    width: 100vw;
+    height: 95vh;
+    background-color: lightgray;
+    margin-top: 3vh;
+}
+
+.space {
+    width: 100vw;
+    height: 1vh;
+}
+
+.row {
+    width: 85vw;
+    height: 40vh;
+    margin-left: 7.5vw;
+    margin-top: 5vh;
+}
+
+.movie {
+    width: 15.72vw;
+    height: 40vh;
+    float: left;
+    margin-left: 1vw;
+}
+
+.movie img {
+    width: 15.72vw;
+    height: 40vh;
+}
+
+.footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: rgba(0,0,0,0.7);
+}
