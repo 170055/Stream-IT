@@ -1,0 +1,58 @@
+body, html {
+    height: 100%;
+   margin: 0px;
+    padding: 0px;
+
+}
+
+.row{
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.container{
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-con{
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    background-color: dimgray;
+}
+
+
+.header-con h3{
+    color: white;
+}
+
+.home{
+    border-bottom: thick solid #4286f4;
+}
+
+#nav{
+    width: auto;
+    margin-right: 5%;
+}
+
+.seaform{
+    margin-left: 10%;
+}
+
+.seaform img{
+    height: 100%;
+    width: auto;
+}
+
+.search-con img{
+    height: 100%;
+    width: auto;
+}
+
+.content-con{
+
+}

@@ -22,12 +22,12 @@ body, html {
     width: 100vw;
     height: 10vh;
     position: fixed;
-
+    margin-top: 10px;
 }
 
 .header-con img{
     height: 100%;
-    width: 10%;
+    width: 15%;
 }
 
 
@@ -37,8 +37,7 @@ body, html {
 }
 
 .home{
-
-    border-bottom: thin solid #4286f4;
+    border-bottom: thick solid #4286f4;
 }
 
 #nav{
@@ -71,19 +70,24 @@ body, html {
 }
 
 .btn-con{
-    margin-top: 60vh
+    margin-top: 60vh;
 }
 
 .watchL-btn{
     border: thin solid #4286f4;
-    width: auto;
+    width: 12vw;
     color: white;
-
+    height: 5vh;
+    font-size: 1.3vw;
 }
 
 .watchN-btn{
     background-color: #4286f4;
-    width: auto;
+    width: 12vw;
     margin-left: 2%;
     color: white;
+    height: 5vh;
+    font-size: 1.3vw;
 }
+
+
