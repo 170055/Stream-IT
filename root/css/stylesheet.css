@@ -9,7 +9,9 @@
     min-width: 6vw;
     text-align: center;
 
+
 }
+
 
 
 #logo{
@@ -29,16 +31,28 @@
 }
 
 .navbar-default {
-	background-color:rgba(0, 0, 0, 0.1); !important;
+	background-color:rgba(0 , 0, 0, 0.1); !important;
 	border-color:transparent;
 	background-image:none;
 	box-shadow:none;
+
 }
 
+.navbar-toggle.collapsed{
+  background-color:rgba(0 , 0, 0, 0.2); !important;
+  margin-top: 2.5vh;
+}
+
+.navbar-toggle{
+  background-color:rgba(0 , 0, 0, 0.2); !important;
+  margin-top: 2.5vh;
+}
 
 
 .navbar-default .navbar-nav>li>a {
    color:#fff;
 }
+
+
 
 /* basic header*/
