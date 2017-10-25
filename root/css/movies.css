@@ -31,7 +31,7 @@ p {
 }
 
 .page-nav {
-    width: 60vw;
+    width: 63vw;
     height: 5vh;
     margin-left: 20vw;
     margin-top: 3vw;
@@ -41,7 +41,7 @@ p {
 
 .block {
     height: 4.7vh;
-    width: 9.6vh;
+    width: 9.8vh;
     border-radius: 0.5vh;
     float: left;
 }
