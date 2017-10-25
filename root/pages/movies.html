@@ -23,19 +23,71 @@
     <body>
       <div class="container">
           
-         <div class="header-con col-xs-12">
-             
-            <img src="../img/logo.png" class="col-xs-2">
-                <a href="home.html" id="nav" class="col-xs-2"><h3>Home</h3></a>
-                <a href="movies.html" id="nav" class="movies col-xs-2"><h3>Movies</h3></a>
-                <a href="series.html" id="nav" class="col-xs-2"><h3>Series</h3></a>
-                <a href="watchlist.html" id="nav" class="col-xs-2"><h3>Watch List</h3></a>
-                <div class=" seaform col-xs-2">
-                    <img class="col-xs-6" src="../img/header/identity.png">
-                    <div class="search-con col-xs-6">Search<img src="../img/header/magnifying%20glass.png"></div>
-                </div>
+        <div class="header">
 
-         </div>
+          <nav id="nav" class="navbar navbar-default navbar-fixed-top ">
+
+              <div id="layout" class="container">
+
+                  <div class="navbar-header">
+
+                      <a class="navbar-brand" href="./home.html">
+                          <img id="logo" src="../img/logo.png" alt=""></a>
+
+                      <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+
+
+
+                      </button>
+
+                  </div>
+
+                  <div  class=" navbar-collapse collapse">
+
+                      <ul  class="nav navbar-nav">
+
+                              <li id="active" ><a href="./home.html">Home</a></li>
+                              <li><a href="./movies.html">Movies</a></li>
+                              <li><a href="./series.html">Series </a></li>
+                              <li><a href="./watchlist.html">Watch List</a></li>
+
+
+                      </ul>
+
+
+
+                      <form  class="navbar-form navbar-right hidden-xs">
+                      <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+
+
+
+
+                            <button class="btn btn-default" type="submit">
+
+                              <i class="glyphicon glyphicon-search "></i>
+                            </button>
+                        </div>
+                      </div>
+                      </form>
+
+                      <ul class="nav navbar-nav navbar-right hidden-xs">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
+
+                    </ul>
+
+                  </div>
+
+              </div>
+
+          </nav>
+
+      </div> 
          
         <div class="content-con">
             
