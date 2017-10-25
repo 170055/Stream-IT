@@ -4,11 +4,87 @@
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
+  color: white;
 }
 
 
 .content-con>.btn{
-    margin-top: 70vh;
-    margin-right:  1%;
+    margin-top: 63vh;
 
+}
+
+
+#plist{
+  margin-left: 1vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color:#18abff;
+  color: white;
+}
+
+#watchn{
+  margin-left: 1vw;
+  background-color: #18abff;
+  border-color:transparent;
+  color: white;
+}
+
+#title{
+  margin-left: 1vw;
+}
+
+#qlty{
+  background-color: white;
+  color: black;
+  width: auto;
+  border-radius: 25px;
+  margin-top: 2vh;
+  margin-left: 1vw;
+
+}
+
+#imdb{
+  margin-top: 0;
+  text-align: center;
+
+}
+
+#genre{
+  margin-left: 0px;
+}
+
+#sum{
+  margin-left: 0px;
+}
+
+#position{
+  color: rgba(255, 255, 255, 0.3);
+  margin: 0px;
+  padding: 0px;
+
+}
+
+#position1{
+  color: #18abff;
+  margin: 0px;
+  padding: 0px;
+}
+
+.span{
+  margin: 0px;
+  padding: 0px;
+}
+
+.glyphicon.glyphicon-one-fine-dot {
+    margin-bottom: -.10em;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+    content:"\25cf";
+    font-size: 3em;
+    margin: 0px;
+    padding: 0px;
+    float: left;
 }
