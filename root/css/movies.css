@@ -39,6 +39,27 @@ p {
     border-radius: 0.5vh;
 }
 
+.block {
+    height: 4.7vh;
+    width: 9.6vh;
+    border-radius: 0.5vh;
+    float: left;
+}
+
+.block p {
+    color: black;
+    text-align: center;
+    margin-top: 0.2vh;
+}
+
+#gray {
+    height: 4.7vh;
+    width: 9.6vh;
+    border-radius: 0.5vh;
+    float: left;
+    background-color: lightgray;
+}
+
 .grey-block {
     width: 100vw;
     height: 95vh;
