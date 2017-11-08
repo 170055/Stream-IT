@@ -31,7 +31,7 @@
 }
 
 .navbar-default {
-	background-color:rgba(0 , 0, 0, 0.5); !important;
+	background-color:rgba(0,0,0,0.5); !important;
 	border-color:transparent;
 	background-image:none;
 	box-shadow:none;
@@ -63,12 +63,14 @@
 
 /* Movie, series and watchlist basic structure*/
 
+.background-colour {
+  background-color: dimgrey
+}
+
 .heading{
-  color: blue;
+  color: deepskyblue;
   margin-top: 10vh;
-
-
-width: 100%;
+  width: 100%;
 
 }
 
@@ -76,14 +78,12 @@ width: 100%;
 
     text-decoration: underline;
     width: 80%;
-
-    border-bottom: thin solid #806080;
+    border-bottom: thin solid white;
 }
 
 
 #page-selection{
     width: 100%; !important;
-
 }
 
 .pageScroller{
@@ -104,7 +104,7 @@ width: 100%;
 
 #grey-con{
   width: 100%;
-  background-color: #cccccc;
+  background-color: rgba(0,0,0,0.8);
   height: auto;
 }
 
@@ -123,7 +123,16 @@ width: 100%;
 
 #footer{
   width: 100%;
-  height: 10%;
-  background-color: white;
+  height: 10vh;
+  background-color: dimgrey;
+}
+
+#footer h5 {
   text-align: center;
+  color: white;  
+  margin-top: 4vh;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 0px){
+   
 }
