@@ -1,4 +1,4 @@
-var movies = ["Star Wars", "Thor: Ragnarok", "Arrival", "Harry potter", "Titanic", "Baby driver", "insurgent", "La la land", "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon", "1922", "La la land", "Spider-Man Homecoming", "Jungle", "The Snowman"];
+var movies = ["Star Wars", "Thor: Ragnarok", "Arrival", "Harry potter", "Titanic", "Baby driver", "insurgent", "La la land", "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon", "1922", "La la land", "Spider-Man Homecoming", "Jungle", "The Snowman", "Flatliners", "The maze runner", "Grease", "Wonder woman", "Dunkirk", "Logan", "John wick", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Get out", "Justice league", "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
 var counter = 0;
 
