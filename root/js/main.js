@@ -21,6 +21,14 @@ for (var i = 0; i < 8; i++) {
     if(image !== "N/A"){
 
       $("#con"+ 1).css("background-image", 'url(' + image + ')');
+      $("#con"+ 2).css("background-image", 'url(' + image + ')');
+      $("#con"+ 3).css("background-image", 'url(' + image + ')');
+      $("#con"+ 4).css("background-image", 'url(' + image + ')');
+      $("#con"+ 5).css("background-image", 'url(' + image + ')');
+      $("#con"+ 6).css("background-image", 'url(' + image + ')');
+      $("#con"+ 7).css("background-image", 'url(' + image + ')');
+      $("#con"+ 0).css("background-image", 'url(' + image + ')');
+      $("#con"+ 1).css("background-image", 'url(' + image + ')');
 
     }
 
