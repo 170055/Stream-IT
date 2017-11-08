@@ -12,17 +12,22 @@
         <link rel="stylesheet" href="../bootstrap/3.3.6/css/bootstrap.min.css">
         <script src="../bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
+        <script src="../js/plugins/jquery.bootpag.min.js"></script>
+
         <!-- project files -->
         <link rel="stylesheet" href="../css/watchlist.css">
         <link rel="stylesheet" href="../css/stylesheet.css">
 
         <link rel="icon" href="../img/favicon.png">
 
+        <script src="../js/watchlist.js"></script>
+        <script src="../js/main.js"></script>
+
     </head>
 
     <body>
-      <div class="container">
-          
+
+
         <div class="header">
 
           <nav id="topnav" class="navbar navbar-default navbar-fixed-top ">
@@ -63,6 +68,8 @@
                       </div>
                       </form>
 
+
+
                       <ul class="nav navbar-nav navbar-right hidden-xs">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
                       </ul>
@@ -74,134 +81,101 @@
           </nav>
 
       </div>
-         
-        <div class="content-con">
-            
-           <div class= "heading-con">
-               <div class="heading">
-                   <p>Watch List</p>
-               </div>
-           </div>  
-           
-           <div class="page-nav"> 
-                   <div class="block">
-                       <p>&#60&#60</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>1</p>
-                   </div>
-                   <div class="block">
-                       <p>2</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>3</p>
-                   </div>
-                   <div class="block">
-                       <p>4</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>5</p>
-                   </div>
-                   <div class="block">
-                       <p>6</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>7</p>
-                   </div>
-                   <div class="block">
-                       <p>...</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>10</p>
-                   </div>
-                   <div class="block">
-                       <p>&#62&#62</p>
-                   </div>
-           </div>
-           
-               <div class="grey-block">
-                   <div class="space">
-                   </div>
-                   <div class="row">
-                       <div class="movie">
-                          <img src="../img/watchlist/amity.jpg"> 
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/Avatar-2.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/batman.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/it.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/kong.jpg">
-                       </div>
-                   </div> 
-        
-                   <div class="row">
-                       <div class="movie">
-                           <img src="../img/watchlist/power.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/rings.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/space.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/dr.jpg">
-                       </div>
-                       <div class="movie">
-                           <img src="../img/watchlist/hack.jpg">
-                       </div>
-                   </div>
-               </div>
+    <!--header-->
 
-               <div class="page-nav">  
-                   <div class="block">
-                       <p>&#60&#60</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>1</p>
-                   </div>
-                   <div class="block">
-                       <p>2</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>3</p>
-                   </div>
-                   <div class="block">
-                       <p>4</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>5</p>
-                   </div>
-                   <div class="block">
-                       <p>6</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>7</p>
-                   </div>
-                   <div class="block">
-                       <p>...</p>
-                   </div>
-                   <div class="block" id="gray">
-                       <p>10</p>
-                   </div>
-                   <div class="block" >
-                       <p>&#62&#62</p>
-                   </div>
-               </div>
-            
-        </div>
-          
-        <div class="footer" >
-          
-        </div>
+    <div class="container">
+
+
+      <div class="row">
+
+      <div class="heading col-xs-12">
+
+        <h3 class="col-xs-2" id="heading">Watch List</h3>
+
+        <div class="pageScroller col-xs-12">
+        <div id="selector" class="col-xs-12"></div>
+        <div id="page-selection" class="col-xs-12"></div>
+          </div>
+
+          <form action="" class="col-xs-12">
+
+            <div class="col-xs-3 datainput">
+            <label for="genre">Genre</label>
+            <select name="genre"  id="genre">
+                <option value="horror">Horror</option>
+                <option value="animation">Animation</option>
+                <option value="action">Action</option>
+                <option value="romance">Romance</option>
+            </select>
+          </div>
+
+              <div class="col-xs-3 datainput">
+            <label for="imdb">IMDB Rating</label>
+            <select name="imdb" id="imdb">
+                <option value="horror">10</option>
+                <option value="animation">Animation</option>
+                <option value="action">Action</option>
+                <option value="romance">12</option>
+            </select>
+            </div>
+
+            <div class="col-xs-3 datainput">
+            <label for="userrating">User Rating</label>
+            <select name="userrating" id="userrating">
+                <option value="horror">1</option>
+                <option value="animation">2</option>
+                <option value="action">3</option>
+                <option value="romance">4</option>
+                <option value="romance">5</option>
+            </select>
+            </div>
+
+            <div class="col-xs-3 datainput">
+            <label for="year">Year</label>
+            <select name="year" id="year">
+                <option value="horror">2010</option>
+                <option value="animation">Animation</option>
+                <option value="action">Action</option>
+                <option value="romance">Romance</option>
+            </select>
+            </div>
+
+          </form>
+
 
     </div>
+
+    </div>
+    </div>
+
+    <div class="container" id="grey-con">
+
+    
+      <div class="col-xs-1 hidden-xs"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con0"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con1"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con2"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con3"></div>
+
+      <div class="col-xs-1 hidden-xs"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con4"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con5"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con6"></div>
+      <div class="datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3" id="con7"></div>
+
+
+
+
+
+
+
+      </div>
+
+      <div class="container-fluid" id="footer">
+        <h5>Powered by the pirate stream</h5>
+
+      </div>
+
     </body>
 
 </html>
