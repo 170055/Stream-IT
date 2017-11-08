@@ -17,104 +17,114 @@
         <link rel="stylesheet" href="../css/stylesheet.css">
 
         <link rel="icon" href="../img/favicon.png">
-
-
-
-
     </head>
 
+    
+    
     <body>
-      <div class="header">
+      <!--Header-->
+      <div class="header"> 
 
-          <nav id="topnav" class="navbar navbar-default navbar-fixed-top ">
+          <nav id="topnav" class="navbar navbar-default navbar-fixed-top "> <!--Navigation-->
 
-              <div id="layout" class="container">
+              <div id="layout" class="container"> <!-- Container-->
 
-                  <div class="navbar-header">
+                  <div class="navbar-header"> <!--Nav Header-->
 
                       <a class="navbar-brand" href="./home.html">
-                          <img id="logo" src="../img/logo.png" alt=""></a>
+                          <img id="logo" src="../img/logo.png" alt=""></a> <!--Logo-->
 
                       <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-items">
                           <span class="sr-only">Toggle navigation</span>
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
+                      </button> <!--Hamburger Menu-->
 
+                  </div> <!--Nav header close-->
 
+                  <div id="navbar-items" class=" navbar-collapse collapse"> <!--Nav Items-->
 
-                      </button>
-
-                  </div>
-
-                  <div id="navbar-items" class=" navbar-collapse collapse">
-
-                      <ul id="nav" class="nav navbar-nav">
+                      <ul id="nav" class="nav navbar-nav"> <!--Nav content-->
 
                               <li id="active"><a href="./home.html">Home</a></li>
                               <li><a href="./movies.html">Movies</a></li>
                               <li><a href="./series.html">Series </a></li>
                               <li><a href="./watchlist.html">Watch List</a></li>
 
-
-                      </ul>
+                      </ul> <!--Nav content close-->
 
 
 
                       <form  class="navbar-form navbar-right hidden-xs">
-                      <div class="input-group">
+                      <div class="input-group"> <!--Input-->
                         <input type="text" class="form-control" placeholder="Search">
-                        <div class="input-group-btn">
-
-
-
-
+                        
+                          
+                        <div class="input-group-btn"> <!--Search button-->
                             <button class="btn btn-default" type="submit">
 
                               <i class="glyphicon glyphicon-search "></i>
                             </button>
-                        </div>
-                      </div>
+                        </div>  <!--Search button close-->
+                          
+                      </div> <!--Input close-->
                       </form>
 
-                      <ul class="nav navbar-nav navbar-right hidden-xs">
+                      <ul class="nav navbar-nav navbar-right hidden-xs"> <!--Profile icon-->
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span></a></li>
 
-                    </ul>
+                      </ul> <!--Profile icon close-->
 
-                  </div>
+                  </div> <!--Nav Items close-->
 
-              </div>
+              </div> <!--Container close-->
 
-          </nav>
+          </nav> <!--Navigation Close-->
 
-      </div>
-
-      <div class="container-fluid">
-          <div class="row">
-            <div class="content-con col-xs-12">
+      </div> <!--Header Close-->
+      <!--End of header-->
+       
+        
+        
+      <!--Content-->  
+      <div class="container-fluid"> <!--Container-->
+          
+          <div class="row"> <!--row-->
+              
+            <div class="content-con col-xs-12"> <!--Content container-->
                 
-               <div id="myModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                      <div class="modal-header">
+               <!--Modal-->
+                <div id="myModal" class="modal fade" role="dialog">
+                    
+                  <div class="modal-dialog"> <!-- Modal dialog-->
+                      
+                    <div class="modal-content"> <!-- Modal content-->
+                        
+                      <div class="modal-header"> <!-- Modal header-->
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">Welcome to StreamIt!</h4>
-                      </div>
-                      <div class="modal-body">
+                      </div> <!-- Modal header close-->
+                        
+                      <div class="modal-body"> <!-- Modal body-->
                         <p>This is the site where all of your biggest streaming dreams come true! Here at StreamIt, we offer a wide range of movies and series in all kinds of exciting genres. We even offer you the opportunity to save your favourites to a watchlist so that you skip the hassle of searching for them later.</p>
                         <p>We hope you enjoy your stay!</p>
                         <p>The StreamIt Team</p>
-                      </div>
-                      <div class="modal-footer">
+                      </div> <!-- Modal body close-->
+                        
+                      <div class="modal-footer"> <!-- Modal footer-->
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
+                      </div> <!-- Modal footer close-->
+                        
+                    </div> <!-- Modal content end-->
 
-                  </div>
+                  </div> <!-- Modal dialog-->
+                    
               </div>
+            <!--modal end-->
 
+                
+                
               <a type="button" href="./watchlist.html" id="plist" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">+ Watch List</a>
 
               <a type="button" href="./movies.html" id="watchn" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">Watch Now</a>
@@ -145,17 +155,13 @@
               </div>
                </div>
 
-              </div>
+              </div> <!--Content container close-->
 
-            </div>
-          </div>
-
-      </div>
-
-
-
-
-
+            </div> <!--row close-->
+          
+          </div>  <!--Container close-->
+        
+        <!--Content end-->
 
     </body>
 </html>
