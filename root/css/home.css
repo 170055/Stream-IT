@@ -89,3 +89,10 @@
     padding: 0px;
     float: left;
 }
+
+@media only screen and (max-width: 767px) {
+ .content-con {
+        background-image: url(../img/home/war-planet-apes-2504_6.jpg);
+        color: aliceblue;
+    }
+}
