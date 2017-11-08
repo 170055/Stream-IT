@@ -1,10 +1,14 @@
-var movies = ["Star Wars", "Thor: Ragnarok", "Arrival", "Harry potter", "Titanic", "Baby driver", "insurgent", "La la land", "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon", "1922", "La la land", "Spider-Man Homecoming", "Jungle", "The Snowman", "Flatliners", "The maze runner", "Grease", "Wonder woman", "Dunkirk", "Logan", "John wick", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Get out", "Justice league", "The lego movie", "Love and other drugs"];
+var movies = ["Star Wars", "Thor: Ragnarok", "Arrival", "Harry potter",
+ "Titanic", "Baby driver", "insurgent",  "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon",  "Spider-Man Homecoming", "Jungle", "The Snowman", "Flatliners", "The maze runner", "Grease", "Wonder woman",
+  "Dunkirk", "Logan", "John wick", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Get out", "Justice league", "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
 var counter = 0;
+var move = 0;
 
 
 
 function main() {
+  //clear
   for (var i = 0; i < 8; i++) {
     $("#con"+ i).css("background-image", 'url(' + '/' + ')');
 
@@ -12,14 +16,14 @@ function main() {
 
 for (var i = 0; i < 8; i++) {
 
-  console.log(counter);
 
   (function(i) {
 
-  $.getJSON('https://www.omdbapi.com/?t=' + encodeURI(movies[i]) + '&apikey=90d22851').then(function(response) {
+  $.getJSON('https://www.omdbapi.com/?t=' + encodeURI(movies[i + move]) + '&apikey=90d22851').then(function(response) {
 
 
     console.log(counter);
+    console.log(move +" move");
 
     var title = response.Title;
     var image = response.Poster;
@@ -33,10 +37,7 @@ for (var i = 0; i < 8; i++) {
     var check = true;
 
     var genresl = $("#genre").val();
-
-
     console.log(response);
-
     //year
     if ($("#year").val() == "all") {
       if(check == true){
@@ -52,7 +53,6 @@ for (var i = 0; i < 8; i++) {
     }
     //year
 
-
     //genre filter
     if ($("#genre").val() == "all") {
       if(check == true){
@@ -65,19 +65,13 @@ for (var i = 0; i < 8; i++) {
         check = false;
       }
     }//genre filter
-
     console.log(check+ " 1");
-
-
-
-
     //imdb
     if ($("#imdb").val() == "all") {
       if(check == true){
         check = true;
       }
     }else {
-
       if ($("#imdb").val() <= imdb-1){
         check = false;
       }else {
@@ -86,16 +80,11 @@ for (var i = 0; i < 8; i++) {
         }else {
           check = true;
         }
-
       }
-
     }
-
     console.log(imdb);
     //imdb
-
     console.log(check+ " 2");
-
 
     //userrating ask Mike!!!!
     if ($("#userrating").val() == "all") {
@@ -105,57 +94,34 @@ for (var i = 0; i < 8; i++) {
     }else {
       if ($("#userrating").val() <= imdb-1){
         check = true;
-
       }else {
         check = false;
       }
     }
     //userrating ask Mike!!!!
-
     console.log(check+ " 3");
-
-
-
-
-
     console.log(check+ " 4");
-
-
-
     if(check === true){
-
-
-
-    if(image !== "N/A"){
-
      $("#con"+ counter).css("background-image", 'url(' + image + ')');
      console.log("works");
-
-    }
+     counter++;
 }else {
   i = i-1;
-  counter = counter-1;
+  move++;
 }
-  console.log(i);
-  console.log(counter);
-
-  counter++;
-
-
+  console.log(i+move+ " data");
+  console.log(move +" move");
+  console.log(movies.length + " movies");
+  console.log(i +" i");
+  console.log(counter + " counter");
   });
-  })(i);
-
-
-
-
+})(i);
 }
-
 }
-
 $(function() {
-
   $(".datainput").on('change input', function() {
     counter=0;
+    move=0;
     main();
   });
 
