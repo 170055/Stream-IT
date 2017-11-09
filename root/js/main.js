@@ -34,6 +34,7 @@ for (var i = 0; i < 8; i++) {
     var rated = response.Rated;
     var plot = response.Plot;
 
+    
     var check = true;
 
     var genresl = $("#genre").val();
@@ -64,9 +65,18 @@ for (var i = 0; i < 8; i++) {
       }else {
         check = false;
       }
+<<<<<<< HEAD
+
+    }
+
+    //genre filter
+
+
+=======
     }//genre filter
     console.log(check+ " 1");
     //imdb
+>>>>>>> b4c48d12804105ecfb5a1a872910cd02924c63b4
     if ($("#imdb").val() == "all") {
       if(check == true){
         check = true;
