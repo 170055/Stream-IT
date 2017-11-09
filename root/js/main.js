@@ -20,6 +20,7 @@ function main() {
     var rated = response.Rated;
     var plot = response.Plot;
 
+    
     var check = true;
     var genresl = $("#genre").val();
 
@@ -45,7 +46,6 @@ function main() {
 
     //genre filter
 
-    console.log(check+ " 1");
 
     if ($("#imdb").val() == "all") {
       if(check == true){
