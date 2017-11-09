@@ -2,6 +2,11 @@ var movies = ["Star Wars", "Thor: Ragnarok", "Arrival", "Harry potter",
  "Titanic", "Baby driver", "insurgent",  "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon",  "Spider-Man Homecoming", "Jungle", "The Snowman", "Flatliners", "The maze runner", "Grease", "Wonder woman",
   "Dunkirk", "Logan", "John wick", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Get out", "Justice league", "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
+
+var series = ["Star Wars", "Thor: Ragnarok"];
+//seris needs to be added/replaced
+
+
 var counter = 0;
 var move = 0;
 
@@ -34,7 +39,7 @@ for (var i = 0; i < 8; i++) {
     var rated = response.Rated;
     var plot = response.Plot;
 
-    
+
     var check = true;
 
     var genresl = $("#genre").val();
@@ -65,18 +70,18 @@ for (var i = 0; i < 8; i++) {
       }else {
         check = false;
       }
-<<<<<<< HEAD
+
 
     }
 
     //genre filter
 
 
-=======
-    }//genre filter
+
+
     console.log(check+ " 1");
     //imdb
->>>>>>> b4c48d12804105ecfb5a1a872910cd02924c63b4
+
     if ($("#imdb").val() == "all") {
       if(check == true){
         check = true;
