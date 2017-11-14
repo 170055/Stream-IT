@@ -69,15 +69,15 @@ $(function (){
       });
 
       if (attemps === 1) {
-        $("#error").text("Oops looks like you forgot your password.")
+        $("#error").text("Oops looks like you forgot your password.");
       }
 
       if (attemps === 2) {
-        $("#error").text("Are you sure this is your account?")
+        $("#error").text("Are you sure this is your account?");
       }
 
       if (attemps === 3) {
-        $("#error").text("Have you tried turning it on and off again?")
+        $("#error").text("Have you tried turning it on and off again?");
       }
 
       if (attemps > 4) {
