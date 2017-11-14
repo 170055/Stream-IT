@@ -75,8 +75,6 @@
 }
 
 #heading{
-
-    text-decoration: underline;
     width: 80%;
     border-bottom: thin solid white;
 }
@@ -194,12 +192,21 @@
     }
     
     .datainput{
-      margin-bottom: 1%;
+      margin-top: -14vh;
       font-size: 2vh;
     }
     
-    .pageScroller{
-      width: 100%; !important;
-      font-size: 2vh;
+    #page-selection{
+      visibility: collapse;
     }
+
+    .pageScroller{
+        visibility: collapse;
+    }
+
+    #selector{
+        visibility: collapse;
+
+    }
+}
 
