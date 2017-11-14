@@ -24,6 +24,10 @@ for (var i = 0; i < 8; i++) {
 
   (function(i) {
 
+    if($(document).find("title").text() == "Movies"){
+
+    }
+
   $.getJSON('https://www.omdbapi.com/?t=' + encodeURI(movies[i + move]) + '&apikey=90d22851').then(function(response) {
 
 
