@@ -175,15 +175,12 @@
 
     .datadisplay{
       background-repeat: no-repeat;
-<<<<<<< HEAD
       background-size: auto 100%;
       height: 220px;
       width: 40%;
-=======
       background-size: contain;
       height: 480px;
       width:85%;
->>>>>>> 74cde8e2a0fabfa83431e62ede53d1cc12a31396
       margin-right: 1%;
       margin-left: 7%;
       margin-top: 8%;
@@ -201,13 +198,10 @@
       margin-top: -14vh;
       font-size: 2vh;
     }
-<<<<<<< HEAD
     
     #page-selection{
       visibility: collapse;
     }
-=======
->>>>>>> d10fb7811ba7fca4b340492216e9d6abfa664916
 
     .pageScroller{
         visibility: collapse;
