@@ -78,6 +78,23 @@
     background-color: rgba(0,0,0,0.7);
 }
 
+#modalposter {
+    height: 400px;
+    width: 290px;
+    
+}
+
+.movieDetails {
+    height: 400px;
+    width: 550px;
+    float: right;
+    margin-top: -350px;
+}
+
+#return {
+    margin-right: -530px;
+}
+
 #watch-list{
   margin-left: 1vw;
   margin-top: 30px;
@@ -307,6 +324,58 @@
 
     .addwatchlist{
     margin-top: 70px;
+    }
+    
+    #detailsModal {
+    color: black;
+    margin-top: 20vh;
+    height: 400px;
+    }
+    
+    .modal-body {
+    background-color: dimgrey;
+    color: white;
+    height: 520px;
+    }
+    
+    .modal-footer {
+    height: 70px;
+    }
+    
+    #modalposter {
+        height: 200px;
+        width: 130px;
+        margin-left: 100px;
+    }
+
+    .movieDetails {
+        height: 400px;
+        width: 350px;
+        float: right;
+        margin-top: 0px;
+    }
+
+    #return {
+        margin-right: 0px;
+        margin-top: -140px;
+    }
+
+    #watch-list{
+      margin-left: 1vw;
+      margin-top: 30px;
+      width: 100px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color:#18abff;
+      color: white;
+    }
+
+    #watch-now{
+      margin-left: 1vw;
+      margin-top: 30px;
+      width: 100px;
+      background-color: #18abff;
+      border-color:transparent;
+      color: white;
     }
 }
 
