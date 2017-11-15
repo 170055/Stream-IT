@@ -25,16 +25,13 @@ var i = 0;
 function main() {
   var check = true;
 
-  if ($(document).find("title").text() == "Watch List") {
-      content = movies[counter]; //move later
-  }
 
   if ($(document).find("title").text() == "Series") {
-      content = series[counter]; //move later
+      content = series[counter]; //Load Series array
   }
 
   if ($(document).find("title").text() == "Movies") {
-      content = movies[counter]; //move later
+      content = movies[counter]; //Load Movies array
   }
 
 
@@ -81,7 +78,7 @@ function main() {
       //add content
       $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
+      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='"+title+"'></div> <div class='addwatchlist' data-title='"+title+"'></div> </div> </div>");
 
       //add content
 
@@ -149,7 +146,7 @@ function main() {
         //add content
         $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-        $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info'  data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
+        $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info'  data-title='"+title+"'></div> <div class='addwatchlist' data-title='"+title+"'></div> </div> </div>");
 
         //add content
 
@@ -253,3 +250,42 @@ $(function() {
 
 
 });
+
+
+//Local Storage
+
+var store;
+
+if (localStorage){
+  $(document).ready(function(){
+    var watchlist = [];
+
+    var names = [];
+    names[0] = prompt("New member name?");
+    localStorage.setItem("names", JSON.stringify(names));
+
+    $(document).on('click', '.addwatchlist', function(event){
+
+
+    watchlist.push($(this).data("title"));
+
+    localStorage.setItem("watchlist", watchlist[1]);
+
+    console.log("logged");
+
+
+  });
+
+
+
+  if ($(document).find("title").text() == "Watch List") {
+    console.log("read");
+    console.log(localStorage.getItem("title"));
+
+  }
+
+
+})
+
+}
+//Local Storage
