@@ -195,7 +195,7 @@ function loop() {
 
 
 
-};
+}
 
 
 $(function() {
@@ -211,12 +211,8 @@ $(function() {
     event.preventDefault();
     $('#searchModal').modal('show');
   });
-    
-  // watch modal
-  $("#watch-button").click, (function(event) {
-    event.preventDefault();
-    $('#Watch-Modal').modal('show');
-  });
+
+
 
   // details modal
   $(document).on('click', '.more-info', function(event) {
@@ -232,9 +228,10 @@ $(function() {
       async: false
     }).done(function(response) {
 
+      var title2 = response.Title;
 
 
-      $('#modaltitle').text(response.Title);
+      $('#modaltitle').text(title2);
 
       $('#modalposter').css("background-image", 'url(' + response.Poster + ')');
       $('#modalgenre').text("Genre: " + response.Genre);
@@ -254,8 +251,19 @@ $(function() {
 
   });
 
+
+
   loop();
 
+
+  $("#watchn").click(function(event) {
+    event.preventDefault();
+
+    $('#detailsModal').modal("hide");
+
+    $('#watch-modal').modal('show');
+
+  });
 
 });
 
