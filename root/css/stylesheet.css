@@ -332,7 +332,7 @@
     height: 400px;
     }
     
-    .modal-body {
+    #modal-body {
     background-color: dimgrey;
     color: white;
     height: 520px;
