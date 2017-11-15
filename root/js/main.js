@@ -1,6 +1,5 @@
 
-var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Titanic", "Baby driver", "Hunger Games",  "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon",  "Spider-Man Homecoming", "Jungle","Star Wars" , "Flatliners", "The maze runner", "Grease", "Wonder woman",
-  "Dunkirk", "Logan", "Thor", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Mr Bean", "Justice league", "The lego movie", "Love and other drugs"];
+var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Titanic", "Baby driver", "Hunger Games",  "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon",  "Spider-Man Homecoming", "Jungle","Star Wars" , "Flatliners", "The maze runner", "Grease", "Wonder woman", "Dunkirk", "Logan", "Thor", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Mr Bean", "Justice league", "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
 
 var series = ["Star Wars", "Thor: Ragnarok"];
@@ -24,6 +23,7 @@ var plot = '';
 
 
 function main() {
+  var check = true;
 
   console.log(counter + " counter");
   console.log(con + " con");
@@ -50,11 +50,11 @@ content = movies[counter]; //move later
       plot = response.Plot;
 
 
-      console.log(title+"1");
+
     }).then(function() {
 
       console.log("Title:" + title);
-      console.log("Image:" + title);
+      console.log("Genre:" + genre);
 
         var all = true;
 
@@ -71,7 +71,7 @@ content = movies[counter]; //move later
           all = false;
         }
 
-        console.log(all);
+
 
     if(all === true){
 
@@ -85,37 +85,104 @@ content = movies[counter]; //move later
       $("#con"+ counter).css("background-image", 'url(' + image + ')');
 
     }else {
-      var check = true;
 
-    var genresl = $("#genre").val();
 
-    //year
-    if (year >=! $("#year").val()){
-        check = false;
-    }
-    //year
+      var genresl = $("#genre").val();
 
-    //genre filter
-   if ($("#genre").val() == "all") {
-     if(check == true){
-       check = true;
-     }
-   }else {
-     if (genre.indexOf(genresl) != -1) {
-       check = true;
+     //year
+     if ($("#year").val() == "all") {
+       if(check == true){
+         check = true;
+       }
      }else {
-       check = false;
+       if (year >= $("#year").val()){
+
+         check = true;
+       }else {
+         check = false;
+       }
+     }
+     //year
+
+     //genre filter
+     if ($("#genre").val() == "all") {
+       if(check == true){
+         check = true;
+       }
+     }else {
+       if (genre.indexOf(genresl) != -1) {
+         check = true;
+       }else {
+         check = false;
+       }
+
+
+     }
+
+     //genre filter
+
+
+
+
+
+     //imdb
+
+     if ($("#imdb").val() == "all") {
+       if(check == true){
+         check = true;
+       }
+     }else {
+       if ($("#imdb").val() <= imdb-1){
+         check = false;
+       }else {
+         if (check == false) {
+           check = false;
+         }else {
+           check = true;
+         }
+       }
+     }
+
+     //imdb
+
+
+     //userrating ask Mike!!!!
+     if ($("#userrating").val() == "all") {
+       if(check == true){
+         check = true;
+       }
+     }else {
+       if ($("#userrating").val() <= imdb-1){
+         check = true;
+       }else {
+         check = false;
+       }
+     }
+     //userrating ask Mike!!!!
+
+
+
+
+     if(check === true){
+
+       //add content
+       $("#grey-con").append("<div id=" + "con"+con + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
+
+       $("#con"+ counter).append("<div class='overlay'> <div class='movie-content'> <div class='play-btn'></div> <div class='more-info'></div> <div class='addwatchlist'></div> </div> </div>");
+
+       //add content
+
+       $("#con"+ counter).css("background-image", 'url(' + image + ')');
+
      }
 
 
    }
 
-   //genre filter
-
-    console.log(check + " checked");
 
 
-    }
+
+
 
 
     });
@@ -127,15 +194,34 @@ function clear() {
   $('#grey-con').empty();
 }
 
+function loop(){
+
+
+  clear();
+  var i=0;
+
+  while (i < 8){
+
+    main();
+    counter++;
+    con++;
+    i++;
+
+  }
+
+
+
+};
+
+
 $(function(){ $(".datainput").on('change input', function(){
     clear();
-    main();
+    loop();
+    counter = 0;
+    con =0;
 
   });
 });
-
-
-
 
 $(function (){
 
@@ -145,22 +231,7 @@ $(function (){
          $('#searchModal').modal('show');
        });
 
-
-  clear();
-  var i=0;
-
-  while (i < 8){
-    console.log(counter);
-
-
-main();
-    main();
-    counter++;
-    con++;
-    i++;
-
-  }
-
+       loop();
 
 
 });
