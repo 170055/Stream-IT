@@ -244,7 +244,7 @@
   <!--Details Modal-->
   <div id="detailsModal" class="modal fade" role="dialog">
 
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
       <!-- Modal dialog-->
 
       <div class="modal-content">
@@ -257,7 +257,7 @@
         </div>
         <!-- Modal header close-->
 
-        <div class="modal-body">
+        <div class="modal-body" id="modal-body">
           <!-- Modal body-->
           <div class="poster"id="modalposter"></div>
           <div class="movieDetails">
@@ -266,17 +266,19 @@
             <h4 id="modaldirector">Director:</h4>
             <h4 id="modalplot">Plot:</h4>
             <h4 id="modalruntime">Runtime:</h4>
+
             <a type="button" id="plist" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1" >+ Watch List</a>
 
             <a type="button" href="./movies.html" id="watchn" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1"
              >Watch Now</a>
+
           </div>
         </div>
         <!-- Modal body close-->
 
         <div class="modal-footer">
           <!-- Modal footer-->
-          <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="return">Return</button>
         </div>
         <!-- Modal footer close-->
 
