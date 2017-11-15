@@ -81,7 +81,7 @@ function main() {
       //add content
       $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-      $("#con" + counter).append("<div class='overlay'> <div class='movie-content'> <div class='play-btn'></div> <div class='more-info'></div> <div class='addwatchlist'></div> </div> </div>");
+      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
 
       //add content
 
@@ -149,7 +149,7 @@ function main() {
         //add content
         $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-        $("#con" + counter).append("<div class='overlay'> <div class='movie-content'> <div class='play-btn'></div> <div class='more-info'></div> <div class='addwatchlist'></div> </div> </div>");
+        $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info'  data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
 
         //add content
 
@@ -217,8 +217,36 @@ $(function() {
 
   // details modal
   $(document).on('click', '.more-info', function(event){
+
     event.preventDefault();
     $('#detailsModal').modal('show');
+
+    console.log($(this).data("title"));
+
+    $.ajax({
+      url: 'https://www.omdbapi.com/?t=' + encodeURI($(this).data("title")) + '&apikey=90d22851',
+      dataType: "json",
+      async: false
+    }).done(function(response) {
+
+            $('#modaltitle').text(response.Title);
+      $('#modalgenre').text("Genre: "+response.Genre);
+      $('#modalimdb').text("IMDB: "+response.imdbRating);
+      $('#modaldirector').text("Director: "+response.Director);
+      $('#modalplot').text("Plot: "+response.Plot);
+      $('#modalruntime').text("Runtime: "+response.Runtime);
+
+      image = response.Poster;
+
+
+
+
+    }).then(function() {
+
+
+    });
+
+
 });
 
   loop();
