@@ -12,6 +12,12 @@ $(function (){
        $('#searchModal').modal('show');
      });
     
+// watch modal
+    $("#watchn").click(function(event){ 
+        event.preventDefault();
+       $('#Watch-Modal').modal('show');
+     });
+    
 });
 
 //slide show
