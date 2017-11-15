@@ -264,6 +264,15 @@ $(function() {
     $('#watch-modal').modal('show');
 
   });
+    
+   $("#play-button").click(function(event) {
+    event.preventDefault();
+
+    $('#detailsModal').modal("hide");
+
+    $('#watch-modal').modal('show');
+
+  });
 
 });
 

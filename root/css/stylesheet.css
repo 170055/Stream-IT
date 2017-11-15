@@ -379,7 +379,7 @@
     }
 }
 
-@media only screen and (max-width: 1250px) and (min-width: 768px) {
+@media only screen and (max-width: 1350px) and (min-width: 768px) {
     .datadisplay{
       background-repeat: no-repeat;
       background-size: 50%;
@@ -413,4 +413,17 @@
     .addwatchlist{
     margin-top: -10px;
     }
+    
+    .movieDetails {
+        height: 400px;
+        width: 250px;
+        float: right;
+        margin-top: -350px;
+    }
+    
+    #return {
+        margin-top: -100px;
+        float: right;
+    }
+    
 }
