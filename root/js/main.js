@@ -81,7 +81,7 @@ function main() {
       //add content
       $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-      $("#con" + counter).append("<div class='overlay'> <div class='movie-content'> <div class='play-btn'></div> <div class='more-info'></div> <div class='addwatchlist'></div> </div> </div>");
+      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
 
       //add content
 
@@ -149,7 +149,7 @@ function main() {
         //add content
         $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-        $("#con" + counter).append("<div class='overlay'> <div class='movie-content'> <div class='play-btn'></div> <div class='more-info'></div> <div class='addwatchlist'></div> </div> </div>");
+        $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info'  data-title='"+title+"'></div> <div class='addwatchlist'></div> </div> </div>");
 
         //add content
 
@@ -217,8 +217,44 @@ $(function() {
 
   // details modal
   $(document).on('click', '.more-info', function(event){
+
     event.preventDefault();
     $('#detailsModal').modal('show');
+
+    console.log($(this).data("title"));
+
+    $.ajax({
+      url: 'https://www.omdbapi.com/?t=' + encodeURI($(this).data("title")) + '&apikey=90d22851',
+      dataType: "json",
+      async: false
+    }).done(function(response) {
+
+      console.log(response);
+
+      $('#modaltitle').text(response.Title);
+      $('#modalgenre').text(response.Genre);
+      $('#modalimdb').text(response.imdbRating);
+      $('#modaldirector').text(response.Director);
+      $('#modalplot').text(response.Plot);
+      $('#modalruntime').text(response.Runtime);
+
+      image = response.Poster;
+      title = response.Title;
+      genre = response.Genre;
+      imdb = response.imdbRating;
+      imdbVote = response.imdbVotes;
+      year = response.Year;
+      rated = response.Rated;
+      plot = response.Plot;
+
+
+
+    }).then(function() {
+
+
+    });
+
+
 });
 
   loop();
