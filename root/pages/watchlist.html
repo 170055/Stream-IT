@@ -115,7 +115,7 @@
   <div class="container" id="grey-con">
 
 
-    
+
 
 
   </div>
@@ -163,77 +163,82 @@
   <!--search modal end-->
 
   <!--Details Modal-->
-<div id="detailsModal" class="modal fade" role="dialog">
+  <div id="detailsModal" class="modal fade" role="dialog">
 
-  <div class="modal-dialog">
-    <!-- Modal dialog-->
+    <div class="modal-dialog modal-lg">
+      <!-- Modal dialog-->
 
-    <div class="modal-content">
-      <!-- Modal content-->
+      <div class="modal-content">
+        <!-- Modal content-->
 
-      <div class="modal-header">
-        <!-- Modal header-->
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title" id="modaltitle">Whatever the movie title is</h4>
-      </div>
-      <!-- Modal header close-->
-
-      <div class="modal-body">
-        <!-- Modal body-->
-        <div class="poster"></div>
-        <div class="movieDetails">
-          <h4 id="modalgenre">Genre:</h4>
-          <h4 id="modalimdb">IMDB Rating:</h4>
-          <h4 id="modaldirector">Director:</h4>
-          <h4 id="modalplot">Plot:</h4>
-          <h4 id="modalruntime">Runtime:</h4>
-          <a type="button" href="./watchlist.html" id="watch-list" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">+ Watch List</a>
-
-          <a type="button" href="./movies.html" id="watch-now" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">Watch Now</a>
+        <div class="modal-header">
+          <!-- Modal header-->
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="modaltitle">Whatever the movie title is</h4>
         </div>
-      </div>
-      <!-- Modal body close-->
+        <!-- Modal header close-->
 
-      <div class="modal-footer">
-        <!-- Modal footer-->
-        <button type="button" class="btn btn-default" data-dismiss="modal">Return</button>
+        <div class="modal-body" id="modal-body">
+          <!-- Modal body-->
+          <div class="poster" id="modalposter"></div>
+          <div class="movieDetails">
+            <h4 id="modalgenre">Genre:</h4>
+            <h4 id="modalimdb">IMDB Rating:</h4>
+            <h4 id="modaldirector">Director:</h4>
+            <h4 id="modalplot">Plot:</h4>
+            <h4 id="modalruntime">Runtime:</h4>
+            <a type="button" href="./watchlist.html" id="watch-list" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">+ Watch List</a>
+
+            <a type="button"  id="watch-now" class="btn btn-default col-xs-3 col-sm-2 col-md-1 col-lg-1">Watch Now</a>
+          </div>
+        </div>
+        <!-- Modal body close-->
+
+        <div class="modal-footer">
+          <!-- Modal footer-->
+          <button type="button" class="btn btn-default" data-dismiss="modal" id="return">Return</button>
+        </div>
+        <!-- Modal footer close-->
+
       </div>
-      <!-- Modal footer close-->
+      <!-- Modal content end-->
 
     </div>
-    <!-- Modal content end-->
+    <!-- Modal dialog-->
 
   </div>
-  <!-- Modal dialog-->
+  <!--Details modal end-->
 
-</div>
-<!--Details modal end-->
+  <!--Watch Now Modal-->
+              <div id="watch-modal" class="modal fade" role="dialog">
 
-<!--Watch Now Modal-->
-                <div id="Watch-Modal" class="modal fade" role="dialog">
+                <div class="modal-dialog"> <!-- Modal dialog-->
 
-                  <div class="modal-dialog"> <!-- Modal dialog-->
+                  <div class="modal-content"> <!-- Modal content-->
 
-                    <div class="modal-content"> <!-- Modal content-->
+                    <div class="modal-header"> <!-- Modal header-->
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title" id="modaltitle">Movie Name</h4>
+                    </div> <!-- Modal header close-->
 
-                      <div class="modal-header"> <!-- Modal header-->
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Movie Name</h4>
-                      </div> <!-- Modal header close-->
+                    <div class="modal-body"> <!-- Modal body-->
 
-                      <div class="modal-body"> <!-- Modal body-->
-                      </div> <!-- Modal body close-->
+                      <div id="videoContainer">
+                        <iframe width="450" height="325" src="https://www.youtube.com/embed/UtgPdoxU-SY" frameborder="0" gesture="media" allowfullscreen></iframe>
+                      </div>
 
-                      <div class="modal-footer"> <!-- Modal footer-->
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div> <!-- Modal footer close-->
+                    </div> <!-- Modal body close-->
 
-                    </div> <!-- Modal content end-->
+                    <div class="modal-footer"> <!-- Modal footer-->
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div> <!-- Modal footer close-->
 
-                  </div> <!-- Modal dialog-->
+                  </div> <!-- Modal content end-->
 
-              </div>
-    <!--Watch Now modal end-->
+                </div> <!-- Modal dialog-->
+
+            </div>
+  <!--Watch Now modal end-->
 
 </body>
 

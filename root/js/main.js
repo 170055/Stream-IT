@@ -333,6 +333,16 @@ $(function() {
 
   });
 
+  $(document).on('click', '.remove', function(event) {
+
+    event.preventDefault();
+
+
+    console.log("remove");
+    $('#watch-modal').modal('show');
+
+  });
+
 });
 
 
