@@ -25,16 +25,16 @@
 
 .modal-header {
     color: #18abff;
-    background-color: dimgrey;
+    background-color: rgba(0,0,0,0.7);
 }
 
 .modal-body {
-    background-color: rgba(0,0,0,0.8);
+    background-color: dimgrey;
     color: white;
 }
 
 .modal-footer {
-    background-color: dimgrey;
+    background-color: rgba(0,0,0,0.7);
 }
 
 #plist{

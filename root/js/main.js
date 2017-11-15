@@ -229,6 +229,8 @@ $(function() {
 
 
       $('#modaltitle').text(response.Title);
+      
+      $('#modalposter').css("background-image", 'url(' + response.Poster + ')');
       $('#modalgenre').text("Genre: "+response.Genre);
       $('#modalimdb').text("IMDB: "+response.imdbRating);
       $('#modaldirector').text("Director: "+response.Director);
@@ -254,14 +256,14 @@ $(function() {
 
 //Local Storage
 
-var store;
+var store= 0;
 
 if (localStorage){
   $(document).ready(function(){
     var watchlist = [];
 
     var names = [];
-    names[0] = prompt("New member name?");
+    names[0] = ("New member name?");
     localStorage.setItem("names", JSON.stringify(names));
 
     $(document).on('click', '.addwatchlist', function(event){
