@@ -136,26 +136,31 @@
 
   .play-btn{
     width: 100%;
-    height: 200px;
-    float: left;
-    background-color: white;
+    height: 350px;
     cursor: pointer;
+    background-image: url(../img/favicon.png);
+    background-repeat: no-repeat;
+    float: left;
   }
 
   .more-info{
     width: 50%;
     height: 200px;
     float: left;
-    background-color: red;
     cursor: pointer;
+    background-image: url(../img/info-button.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
   }
 
   .addwatchlist{
     width: 50%;
     height: 200px;
     float: left;
-    background-color: blue;
     cursor: pointer;
+    background-image: url(../img/plus-button.png);
+    background-repeat: no-repeat;
+    margin-top: 40px;
   }
 
 .datadisplay:hover .overlay {
