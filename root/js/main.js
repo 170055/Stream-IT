@@ -229,7 +229,9 @@ $(function() {
       async: false
     }).done(function(response) {
 
-            $('#modaltitle').text(response.Title);
+
+
+      $('#modaltitle').text(response.Title);
       $('#modalgenre').text("Genre: "+response.Genre);
       $('#modalimdb').text("IMDB: "+response.imdbRating);
       $('#modaldirector').text("Director: "+response.Director);
@@ -237,8 +239,6 @@ $(function() {
       $('#modalruntime').text("Runtime: "+response.Runtime);
 
       image = response.Poster;
-
-
 
 
     }).then(function() {
