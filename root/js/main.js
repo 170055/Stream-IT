@@ -25,23 +25,25 @@ var i = 0;
 function main() {
   var check = true;
 
-  console.log(counter + " counter");
-  console.log(con + " con");
-  console.log(i + " I");
-
   if ($(document).find("title").text() == "Watch List") {
-
+      content = movies[counter]; //move later
   }
 
-  content = movies[counter]; //move later
+  if ($(document).find("title").text() == "Series") {
+      content = series[counter]; //move later
+  }
+
+  if ($(document).find("title").text() == "Movies") {
+      content = movies[counter]; //move later
+  }
+
+
 
   $.ajax({
     url: 'https://www.omdbapi.com/?t=' + encodeURI(content) + '&apikey=90d22851',
     dataType: "json",
     async: false
   }).done(function(response) {
-
-    console.log(response);
 
     image = response.Poster;
     title = response.Title;
@@ -55,11 +57,6 @@ function main() {
 
 
   }).then(function() {
-
-    console.log("Title:" + title);
-    console.log("Genre:" + genre);
-    console.log("IMDB:" + imdb);
-    console.log("Year:" + year);
 
     var all = true;
 
@@ -92,16 +89,11 @@ function main() {
 
     } else {
 
-      console.log(genre + " log");
-
-
-
       //genre filter
 
       if ($("#genre").val() == "all" || genre.indexOf(genresl) != -1) {
-        console.log("Genre true");
+
       } else {
-        console.log("Genre false");
         check = false;
       }
 
@@ -113,30 +105,19 @@ function main() {
       //year
       if (yearI == "all" ||  ( yearI > year-10 && yearI < year+10 ) ) {
 
-        console.log("year true");
-
-
       } else {
         check = false;
-        console.log("year false");
 
       }
       //year
-
-
-
         var imdb2= Math.round(imdb).toFixed();
-        console.log(imdb2 + " rounded");
 
 
       //imdb
 
       if ($("#imdb").val() == "all" ||  $("#imdb").val() <= imdb2 ||  $("#imdb").val() == imdb2   ) {
-        console.log("IMDB True");
 
       } else {
-
-        console.log("IMDB False");
 
         check = false;
       }
@@ -145,7 +126,7 @@ function main() {
 
       //imdb
 
-      console.log(check);
+
 
       var urating= Math.floor((Math.random() * 6) + 1);
       //userrating ask Mike!!!!
@@ -153,7 +134,7 @@ function main() {
 
       } else {
         if ($("#userrating").val() <= urating - 1) {
-          
+
         } else {
           check = false;
         }
@@ -222,30 +203,23 @@ function loop() {
 
 $(function() {
   $(".datainput").on('change input', function() {
-    console.clear();
     clear();
     loop();
-
-
-
-
-
   });
 });
 
 $(function() {
-
   // search bar modal
   $("#searchButton").click(function(event) {
     event.preventDefault();
     $('#searchModal').modal('show');
   });
-    
+
   // details modal
-  $("#info").click(function(event) {
+  $(document).on('click', '.more-info', function(event){
     event.preventDefault();
     $('#detailsModal').modal('show');
-  });
+});
 
   loop();
 
