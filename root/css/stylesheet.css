@@ -81,7 +81,7 @@
 #modalposter {
     height: 400px;
     width: 290px;
-    
+
 }
 
 .movieDetails {
@@ -229,6 +229,19 @@
     background-size: contain;
   }
 
+  .remove{
+    margin: 0px;
+    width: 15%;
+    height: 125px;
+    margin-right: 35px;
+    margin-top: 30px;
+    float: right;
+    cursor: pointer;
+    background-image: url(../img/remove-button.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
 .datadisplay:hover .overlay {
       height: 100%;
 }
@@ -325,23 +338,27 @@
     .addwatchlist{
     margin-top: 70px;
     }
-    
+
+    .remove{
+    margin-top: 70px;
+    }
+
     #detailsModal {
     color: black;
     margin-top: 20vh;
     height: 400px;
     }
-    
+
     #modal-body {
     background-color: dimgrey;
     color: white;
     height: 520px;
     }
-    
+
     .modal-footer {
     height: 70px;
     }
-    
+
     #modalposter {
         height: 200px;
         width: 130px;
@@ -413,6 +430,7 @@
     .addwatchlist{
     margin-top: -10px;
     }
+<<<<<<< HEAD
     
     .movieDetails {
         height: 400px;
@@ -426,4 +444,9 @@
         float: right;
     }
     
+=======
+    .remove{
+    margin-top: -10px;
+    }
+>>>>>>> 828295eb3e5f6a8a95c7a187ed97621bcd23ad47
 }
