@@ -4,6 +4,9 @@ var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Tita
 var series = ["The Good Doctor", "Game of Thrones", "The Vampire diaries", "Breaking bad", "Grey's Anatomy", "Teen wolf", "Pretty little liars", "Da Vinci's Demons", "Devious maids", "That 70's Show", "Stranger Things", "13 Reasons why", "The Walking Dead", "The Flash", "American Horror Story", "Shameless", "iZombie", "The Good Wives", "How I Met Your Mother", "Penny Dreadful", "Arrow", "This us Us", "Lucifer", "Outlander", "Vikings", "The Blacklist", "Criminal Minds", "Mr.Robert", "Blindspot", "Friends", "The Sinner", "The Big Bang Theory", "Dark", "NCIS", "Black Mirror", "Suits", "Big Mouth", "Once Upon A Time", "Westworlds", "Modern Family", "The Night Of", "Supergirl", "House of cards", "Futurama", "Blue Montain State", "Nikita", "True Blood", "Archer", "Raising Hope", "Better Off Ted", "Prison Break", "Mike And Molly", "The Night Shift", "The Flintstones", "The Andy Griffin show", "Batman", "Star Trek:The Original series", "The Addams Family", "My three sons", "Get smart", "The Beverly Hillbillies", "Bewitched", "The Brady Bunch", "The Danny Thomas Show", "Dragnet", "The Munsters", "Gunsmoke", "Hogan's Heroes", "Green Acres", "Angel", "Route 66", "Alf", "The A-Team", "Cheers", "Miami Vice", "Knight Rider", "Full House", "The Cosby Show", "Dynasty", "Malcolm In The Middle", "Buffy The Vampire", "Gilmore Girls", "Survivor", "Freeks and Geeks", "The West Wing", "Oz", "Big Brother", "The Odd Copule", "Adam-12", "Bonanza", "All my children", "Ironside", "Dragnet", "The Flip Wilson Show", "Night Gallery", "60 Minutes", "McCloud", "Doctor who"];
 //seris needs to be added/
 
+var watch = ["The Good Doctor", "Game of Thrones","Midnight Run", "The Accused", "A nightmare on Elm street", "Buffy The Vampire", "Gilmore Girls", "Survivor", "Freeks and Geeks" ];
+//watchlist array
+
 
 var counter = 0;
 var con = 0;
@@ -34,6 +37,41 @@ function main() {
     content = movies[counter]; //Load Movies array
   }
 
+  if ($(document).find("title").text() == "Watch List") {
+    content = watch[counter]; //Load Movies array+
+
+    console.log(content);
+
+    $.ajax({
+      url: 'https://www.omdbapi.com/?t=' + encodeURI(content) + '&apikey=90d22851',
+      dataType: "json",
+      async: false
+    }).done(function(response) {
+
+      image = response.Poster;
+      title = response.Title;
+      genre = response.Genre;
+      imdb = response.imdbRating;
+      imdbVote = response.imdbVotes;
+      year = response.Year;
+      rated = response.Rated;
+      plot = response.Plot;
+
+
+
+    }).then(function() {
+      //add content
+      $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
+
+      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='" + title + "'></div> <div class='remove' data-title='" + title + "'></div> </div> </div>");
+
+      $("#con" + counter).css("background-image", 'url(' + image + ')');
+
+      //add content
+  });
+}
+
+    console.log(content);
 
 
   $.ajax({
@@ -186,10 +224,30 @@ function loop() {
     con++;
     i++;
 
-    if (movies.length < counter) {
-      console.log("Max movies");
-      i = 8;
+    if ($(document).find("title").text() == "Series") {
+      if (series.length < counter) {
+        console.log("Max series");
+        i = 8;
+      }
     }
+
+    if ($(document).find("title").text() == "Movies") {
+
+
+      if (movies.length < counter) {
+        console.log("Max movies");
+        i = 8;
+      }
+
+    }
+
+    if ($(document).find("title").text() == "Watch List") {
+      if (watch.length < counter) {
+        console.log("Max content");
+        i = 8;
+      }
+    }
+
 
   }
 
