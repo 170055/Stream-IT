@@ -322,6 +322,15 @@ $(function() {
     $('#watch-modal').modal('show');
 
   });
+    
+   $("#play-button").click(function(event) {
+    event.preventDefault();
+
+    $('#detailsModal').modal("hide");
+
+    $('#watch-modal').modal('show');
+
+  });
 
   $(document).on('click', '.play-btn', function(event) {
 
