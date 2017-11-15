@@ -109,21 +109,18 @@
 }
 
 .datadisplay{
-
+  position: relative;
   background-repeat: no-repeat;
-  background-size: 94% 415px;
+  background-size: 100% 415px;
   height: 415px;
-  width: 20%;
+  width: 22%;
   margin-right: 1%;
-  margin-left: 1%;
+  margin-left: 2%;
   margin-top: 1%;
   margin-bottom: 1%;
 }
 
-.datadisplay {
-      position: relative;
-      width: 20%;
-    }
+
 
 .overlay {
       position: absolute;
@@ -132,7 +129,7 @@
       right: 0;
       background-color: rgba(0,0,0,0.8);
       overflow: hidden;
-      width: 94%;
+      width: 100%;
       height: 0;
       transition: .5s ease;
     }
@@ -247,17 +244,15 @@
 }
 
 @media only screen and (max-width: 1250px) and (min-width: 768px) {
-<<<<<<< HEAD
     .datadisplay{
       background-repeat: no-repeat;
       background-size: 50%;
       height: 220px;
-      width: 40%;
       background-size: contain;
       height: 370px;
-      width:25%;
+      width: 30%;
       margin-right: 1%;
-      margin-left: 2%;
+      margin-left: 2.3%;
       margin-top: 2%;
       margin-bottom: 1%;
     }
@@ -274,8 +269,4 @@
       height: 0;
       transition: .5s ease;
     }
-    
-=======
-
->>>>>>> 273d3f6377550f8c62acf7ec4338afdd14d590d8
 }
