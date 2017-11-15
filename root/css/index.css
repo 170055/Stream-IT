@@ -101,7 +101,6 @@ body, html {
     width: auto;
     color: rgba(0, 0, 0, 0.4);
     margin-top: 10%;
-
 }
 
 #spacer-sign{
@@ -114,8 +113,6 @@ body, html {
     height: auto;
     margin-top: 14%;
     margin-left: 15%;
-
-
 }
 
 #user{
@@ -127,7 +124,6 @@ body, html {
     height: auto;
     margin-top: 5%;
     margin-left: 15%;
-
 }
 
 
@@ -188,7 +184,6 @@ body, html {
       cursor: pointer;
       color: black;
       margin: 0px;
-
 }
 
 #forgot{
@@ -250,3 +245,56 @@ body, html {
 #signup{
     margin-top: 9.5%;
 }
+
+@media only screen and (max-width: 767px) and (min-width: 0px){
+    
+   .spacer-top {
+    margin: 0px;
+    margin-top: 15%;
+    } 
+    
+    h3 {
+    font-size: 20px;
+    }
+    
+    h4 {
+    font-size: 15px;
+    } 
+    
+    h5 {
+    font-size: 13px;
+    } 
+    
+    .sign1{
+    margin-left: -10px
+    }
+    
+    #remember{
+    margin-left: -25px    
+    }
+    
+    #remember1{
+     margin-left: -20px;
+     margin-top: -3px;
+    }
+    
+    #forgot{
+    margin-top: 0px;
+    }
+    
+    .submit-btn{
+     margin-top: 50px;   
+    }
+    
+    .submit-btn h3{
+    margin-top: 20px;
+    }
+
+    .text-right{
+    margin-top: 40px;
+    }
+    
+}
+
+
+
