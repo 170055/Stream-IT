@@ -211,6 +211,12 @@ $(function() {
     event.preventDefault();
     $('#searchModal').modal('show');
   });
+    
+  // watch modal
+  $("#watch-button").click, (function(event) {
+    event.preventDefault();
+    $('#Watch-Modal').modal('show');
+  });
 
   // details modal
   $(document).on('click', '.more-info', function(event) {
