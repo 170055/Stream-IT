@@ -237,6 +237,12 @@ $(function() {
     event.preventDefault();
     $('#searchModal').modal('show');
   });
+    
+  // details modal
+  $("#info").click(function(event) {
+    event.preventDefault();
+    $('#detailsModal').modal('show');
+  });
 
   loop();
 
