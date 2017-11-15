@@ -23,6 +23,19 @@
     margin-top: 20vh;
 }
 
+.modal-header {
+    color: #18abff;
+    background-color: dimgrey;
+}
+
+.modal-body {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+}
+
+.modal-footer {
+    background-color: dimgrey;
+}
 
 #plist{
   margin-left: 1vw;
