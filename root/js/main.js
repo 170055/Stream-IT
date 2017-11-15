@@ -121,6 +121,8 @@ function main() {
 
 
 
+        imdb = imdb.toFixed();
+        console.log(imdb + "rounde IMDB");
 
 
       //imdb
@@ -185,6 +187,7 @@ function clear() {
   i = 0;
   counter = 0;
   con = 0;
+
   //clear
   $('#grey-con').empty();
 }
