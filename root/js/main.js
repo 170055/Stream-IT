@@ -323,6 +323,16 @@ $(function() {
 
   });
 
+  $(document).on('click', '.play-btn', function(event) {
+
+    event.preventDefault();
+
+
+
+    $('#watch-modal').modal('show');
+
+  });
+
 });
 
 
