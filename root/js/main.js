@@ -256,7 +256,7 @@ $(function() {
   loop();
 
 
-  $("#watchn").click(function(event) {
+  $("#watch-now").click(function(event) {
     event.preventDefault();
 
     $('#detailsModal').modal("hide");
