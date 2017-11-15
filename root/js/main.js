@@ -229,23 +229,15 @@ $(function() {
       async: false
     }).done(function(response) {
 
-      console.log(response);
-
-      $('#modaltitle').text(response.Title);
-      $('#modalgenre').text(response.Genre);
-      $('#modalimdb').text(response.imdbRating);
-      $('#modaldirector').text(response.Director);
-      $('#modalplot').text(response.Plot);
-      $('#modalruntime').text(response.Runtime);
+            $('#modaltitle').text(response.Title);
+      $('#modalgenre').text("Genre: "+response.Genre);
+      $('#modalimdb').text("IMDB: "+response.imdbRating);
+      $('#modaldirector').text("Director: "+response.Director);
+      $('#modalplot').text("Plot: "+response.Plot);
+      $('#modalruntime').text("Runtime: "+response.Runtime);
 
       image = response.Poster;
-      title = response.Title;
-      genre = response.Genre;
-      imdb = response.imdbRating;
-      imdbVote = response.imdbVotes;
-      year = response.Year;
-      rated = response.Rated;
-      plot = response.Plot;
+
 
 
 
