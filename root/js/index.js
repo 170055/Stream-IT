@@ -23,6 +23,13 @@ $(function (){
         failed = 0;
       }
     }
+      
+    if (nameInput == "Alex") {
+      if (passInput == "rocks") {
+        $(location).attr('href', 'pages/home.html');
+        failed = 0;
+      }
+    }
 
     if (nameInput == "Leo") {
       if (passInput == "rocks") {
