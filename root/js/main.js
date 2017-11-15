@@ -4,7 +4,7 @@ var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Tita
 var series = ["American Horror Story", "Game of Thrones", "The Vampire diaries", "Breaking bad", "Grey's Anatomy", "Teen wolf", "Pretty little liars", "Da Vinci's Demons", "Devious maids", "That 70's Show", "Stranger Things", "13 Reasons why", "The Walking Dead", "The Flash", "House of cards", "Shameless", "iZombie", "The Good Wives", "How I Met Your Mother", "Penny Dreadful", "Arrow", "This us Us", "Lucifer", "Outlander", "Vikings", "The Blacklist", "Criminal Minds", "Mr.Robert", "Blindspot", "Friends", "The Sinner", "The Big Bang Theory", "Dark", "NCIS", "The Good Doctor", "Suits", "Big Mouth", "Once Upon A Time", "Westworlds", "Modern Family", "The Night Of", "Supergirl", "Black Mirror", "Futurama", "Blue Montain State", "Nikita", "True Blood", "Archer", "Raising Hope", "Better Off Ted", "Prison Break", "Mike And Molly", "The Night Shift", "The Flintstones", "The Andy Griffin show", "Batman", "Star Trek:The Original series", "The Addams Family", "My three sons", "Get smart", "The Beverly Hillbillies", "Bewitched", "The Brady Bunch", "The Danny Thomas Show", "Dragnet", "The Munsters", "Gunsmoke", "Hogan's Heroes", "Green Acres", "Angel", "Route 66", "Alf", "The A-Team", "Cheers", "Miami Vice", "Knight Rider", "Full House", "The Cosby Show", "Dynasty", "Malcolm In The Middle", "Buffy The Vampire", "Gilmore Girls", "Survivor", "Freeks and Geeks", "The West Wing", "Oz", "Big Brother", "The Odd Copule", "Adam-12", "Bonanza", "All my children", "Ironside", "Dragnet", "The Flip Wilson Show", "Night Gallery", "60 Minutes", "McCloud", "Doctor who"];
 //seris needs to be added/
 
-var watch = ["The Good Doctor", "Game of Thrones","Midnight Run", "The Accused", "A nightmare on Elm street", "Buffy The Vampire", "Gilmore Girls", "Survivor", "Freeks and Geeks" ];
+var watch = ["The Good Doctor", "Game of Thrones","Midnight Run", "The Accused", "A nightmare on Elm street", "Buffy The Vampire", "Gilmore Girls", "Survivor", "Freeks and Geeks" , "Night Gallery", "60 Minutes", "McCloud", "Doctor who" ];
 //watchlist array
 
 
@@ -244,7 +244,7 @@ function loop() {
     if ($(document).find("title").text() == "Watch List") {
       if (watch.length < counter) {
         console.log("Max content");
-        i = 8;
+        i = 7;
       }
     }
 
@@ -322,7 +322,7 @@ $(function() {
     $('#watch-modal').modal('show');
 
   });
-    
+
    $("#play-button").click(function(event) {
     event.preventDefault();
 
