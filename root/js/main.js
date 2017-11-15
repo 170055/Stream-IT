@@ -150,12 +150,10 @@ function main() {
       var urating= Math.floor((Math.random() * 6) + 1);
       //userrating ask Mike!!!!
       if ($("#userrating").val() == "all") {
-        if (check == true) {
-          check = true;
-        }
+
       } else {
         if ($("#userrating").val() <= urating - 1) {
-          check = true;
+          
         } else {
           check = false;
         }
