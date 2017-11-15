@@ -1,4 +1,4 @@
-var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Titanic", "Baby driver", "Hunger Games", "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon", "Spider-Man Homecoming", "Jungle", "Star Wars", "Flatliners", "The maze runner", "Grease", "Wonder woman", "Dunkirk", "Logan", "Thor", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Mr Bean", "Justice league", "The lego movie", "Love and other drugs"];
+var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter", "Titanic", "Baby driver", "Hunger Games", "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon", "Spider-Man Homecoming", "Jungle", "Star Wars", "Flatliners", "The maze runner", "Grease", "Wonder woman", "Dunkirk", "Logan", "Thor", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms",  "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
 
 var series = ["Star Wars", "Thor: Ragnarok"];
@@ -41,6 +41,8 @@ function main() {
     async: false
   }).done(function(response) {
 
+    console.log(response);
+
     image = response.Poster;
     title = response.Title;
     genre = response.Genre;
@@ -57,6 +59,7 @@ function main() {
     console.log("Title:" + title);
     console.log("Genre:" + genre);
     console.log("IMDB:" + imdb);
+    console.log("Year:" + year);
 
     var all = true;
 
@@ -103,30 +106,32 @@ function main() {
       }
 
 
-
+      var yearI = $("#year").val();
 
       //genre filter
 
       //year
-      if ($("#year").val() == "all" || year >= $("#year").val()) {
+      if (yearI == "all" ||  ( yearI > year-10 && yearI < year+10 ) ) {
+
+        console.log("year true");
 
 
       } else {
         check = false;
+        console.log("year false");
 
       }
       //year
 
 
 
-
-
-        imdb = imdb.toFixed();
-        console.log(imdb + "rounde IMDB");
+        var imdb2= Math.round(imdb).toFixed();
+        console.log(imdb2 + " rounded");
 
 
       //imdb
-      if ($("#imdb").val() == "all" || $("#imdb").val() < imdb) {
+
+      if ($("#imdb").val() == "all" ||  $("#imdb").val() <= imdb2 ||  $("#imdb").val() == imdb2   ) {
         console.log("IMDB True");
 
       } else {
@@ -142,14 +147,14 @@ function main() {
 
       console.log(check);
 
-
+      var urating= Math.floor((Math.random() * 6) + 1);
       //userrating ask Mike!!!!
       if ($("#userrating").val() == "all") {
         if (check == true) {
           check = true;
         }
       } else {
-        if ($("#userrating").val() <= imdb - 1) {
+        if ($("#userrating").val() <= urating - 1) {
           check = true;
         } else {
           check = false;
