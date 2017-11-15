@@ -1,4 +1,4 @@
-var movies = ["Insurgent", "Get out", "John Wick", "Harry potter",
+var movies = ["Insurgent", "Alien: Covenant", "John Wick", "Harry potter",
  "Titanic", "Baby driver", "Hunger Games",  "Jigsaw", "It", "Blade Runner 2049", "Murder on the Orient Express", "Geostorm", "Happy Death Day", "A Bad Moms Christmas", "Kingsman: The Golden Circle", "Atomic Blonde", " Suburbicon",  "Spider-Man Homecoming", "Jungle","Star Wars" , "Flatliners", "The maze runner", "Grease", "Wonder woman",
   "Dunkirk", "Logan", "Thor", "Insidious", "Kong: Skull island", "Annabelle", "Baywatch", "The mummy", "Bad moms", "Mr Bean", "Justice league", "The lego movie", "Love and other drugs"];
 //Movies needs to be added/replaced
@@ -144,3 +144,13 @@ $(function() {
 
 
 main();
+
+
+$(function (){ 
+// search bar modal
+    $("#searchButton").click(function(event){ 
+        event.preventDefault();
+       $('#searchModal').modal('show');
+     });
+    
+});
