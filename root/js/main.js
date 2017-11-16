@@ -338,6 +338,26 @@ $(function() {
 
   });
 
+  $(document).on('click', '#watch-list', function(event) {
+
+    event.preventDefault();
+
+    $('#detailsModal').modal("hide");
+
+    $('#noti-modal').modal('show');
+
+  });
+
+  $(document).on('click', '.addwatchlist', function(event) {
+
+    event.preventDefault();
+
+
+
+    $('#noti-modal').modal('show');
+
+  });
+
 
 $(document).on('click', '.remove-btn', function(event) {
 
@@ -355,7 +375,7 @@ $(document).on('click', '.remove-btn', function(event) {
 
       event.preventDefault();
 
-      
+
 
 
 
