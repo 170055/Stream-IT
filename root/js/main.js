@@ -57,21 +57,17 @@ function main() {
       rated = response.Rated;
       plot = response.Plot;
 
-
-
     }).then(function() {
       //add content
       $("#grey-con").append("<div id=" + "con" + counter + " class='datadisplay col-xs-10 col-sm-5 col-md-3 col-lg-3'></div>");
 
-      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='" + title + "'></div> <div class='remove' data-title='" + title + "'></div> </div> </div>");
+      $("#con" + counter).append("<div class='overlay'> <div class='movie-content' > <div class='play-btn'></div> <div class='more-info' data-title='" + title + "'></div> <div class='remove-btn' id='remove' data-title='" + title + "'></div> </div> </div>");
 
       $("#con" + counter).css("background-image", 'url(' + image + ')');
 
       //add content
   });
-}
-
-    console.log(content);
+}else{
 
 
   $.ajax({
@@ -199,7 +195,7 @@ function main() {
 
     }
   });
-
+}
 }
 
 function clear() {
@@ -278,7 +274,7 @@ $(function() {
     event.preventDefault();
     $('#detailsModal').modal('show');
 
-    console.log($(this).data("title"));
+
 
     $.ajax({
       url: 'https://www.omdbapi.com/?t=' + encodeURI($(this).data("title")) + '&apikey=90d22851',
@@ -342,13 +338,16 @@ $(function() {
 
   });
 
-  $(document).on('click', '.remove', function(event) {
+
+$(document).on('click', '.remove-btn', function(event) {
 
     event.preventDefault();
 
 
-    console.log("remove");
-    $('#watch-modal').modal('show');
+    console.log("remove-btn");
+
+    $(this).parent().parent().parent().hide();
+
 
   });
 

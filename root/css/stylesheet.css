@@ -229,7 +229,7 @@
     background-size: contain;
   }
 
-  .remove{
+  .remove-btn{
     margin: 0px;
     width: 15%;
     height: 125px;
@@ -245,6 +245,8 @@
 .datadisplay:hover .overlay {
       height: 100%;
 }
+
+
 
 .poster{
   width: 100px;
@@ -339,7 +341,7 @@
     margin-top: 70px;
     }
 
-    .remove{
+    .remove-btn{
     margin-top: 70px;
     }
 
@@ -430,23 +432,21 @@
     .addwatchlist{
     margin-top: -10px;
     }
-<<<<<<< HEAD
-    
+
+
     .movieDetails {
         height: 400px;
         width: 250px;
         float: right;
         margin-top: -350px;
     }
-    
+
     #return {
         margin-top: -100px;
         float: right;
     }
-    
-=======
-    .remove{
+
+
+    .remove-btn{
     margin-top: -10px;
     }
->>>>>>> 828295eb3e5f6a8a95c7a187ed97621bcd23ad47
-}
