@@ -420,7 +420,7 @@
       background-color: rgba(0,0,0,0.8);
       background: contain;
       overflow: hidden;
-      width: 100%;
+      width: 84%;
       height: 0;
       transition: .5s ease;
     }
