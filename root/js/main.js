@@ -344,12 +344,24 @@ $(document).on('click', '.remove-btn', function(event) {
     event.preventDefault();
 
 
-    console.log("remove-btn");
+
 
     $(this).parent().parent().parent().hide();
 
 
   });
+
+  $(document).on('click', '.datadisplay', function(event) {
+
+      event.preventDefault();
+
+      
+
+
+
+
+
+    });
 
 });
 
