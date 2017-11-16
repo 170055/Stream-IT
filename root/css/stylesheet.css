@@ -436,9 +436,11 @@
 
     .movieDetails {
         height: 400px;
-        width: 250px;
-        float: right;
+        width: 320px;
+        float: left;
+        margin-left: 60vh;
         margin-top: -350px;
+        
     }
 
     #return {
@@ -450,3 +452,9 @@
     .remove-btn{
     margin-top: -10px;
     }
+    
+    #detailsModal {
+    width: 800px;
+    margin-left: 120px;
+    }
+}
